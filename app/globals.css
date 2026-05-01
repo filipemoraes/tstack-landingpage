@@ -1,0 +1,428 @@
+@import "tailwindcss";
+
+/* =====================================================================
+ * DESIGN TOKENS (LIGHT) — mapeados para o motor @theme do Tailwind v4
+ * ===================================================================== */
+@theme {
+  /* Section backgrounds */
+  --color-bg-cream: #faf7f2;
+  --color-bg-white: #ffffff;
+  --color-bg-sky: #eef5fc;
+  --color-bg-ink: #0a1330;
+  --color-bg-mist: #f2f4f8;
+
+  /* Brand */
+  --color-c-100: #aed8fd;
+  --color-c-200: #89c3fb;
+  --color-c-300: #60b4fb;
+  --color-c-350: #51abef;
+  --color-c-500: #0095f8;
+  --color-c-600: #005df9;
+  --color-c-800: #0024ae;
+
+  /* Typography colors */
+  --color-ink: #0a1330;
+  --color-ink-2: #2b3657;
+  --color-muted: #5a6685;
+  --color-muted-2: #858fa8;
+  --color-line: #e6e9f2;
+  --color-line-strong: #d5dbe9;
+
+  /* Accents */
+  --color-accent: #005df9;
+  --color-accent-2: #0095f8;
+  --color-accent-deep: #0024ae;
+
+  /* Status */
+  --color-status-ok: #0aa65f;
+  --color-status-pending: #b87a00;
+  --color-status-error: #c13c1d;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-default: 16px;
+  --radius-lg: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgba(10, 19, 48, 0.04), 0 8px 24px -12px rgba(10, 19, 48, 0.08);
+  --shadow-soft: 0 30px 60px -30px rgba(0, 93, 249, 0.25);
+  --shadow-hero-preview:
+    0 1px 2px rgba(10, 19, 48, 0.04), 0 40px 80px -30px rgba(0, 93, 249, 0.25),
+    0 80px 120px -40px rgba(0, 36, 174, 0.15);
+  --shadow-terminal: 0 30px 60px -20px rgba(10, 19, 48, 0.3), 0 0 40px -10px rgba(0, 149, 248, 0.3);
+
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-roboto), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Animations */
+  --animate-hero-text-slide: heroTextSlide 10s linear infinite;
+  --animate-btn-gradient: btnGradientSlide 2.6s linear infinite;
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes heroTextSlide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 300% 50%;
+    }
+  }
+  @keyframes btnGradientSlide {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 300% 50%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+/* =====================================================================
+ * BASE
+ * ===================================================================== */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin: 0;
+    color: var(--color-ink);
+  }
+  h1 {
+    font-size: clamp(54px, 6.4vw, 88px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+  }
+  h2 {
+    font-size: clamp(34px, 4.2vw, 56px);
+    letter-spacing: -0.035em;
+  }
+  h3 {
+    font-size: clamp(22px, 2.4vw, 32px);
+  }
+  p {
+    margin: 0;
+    color: var(--color-muted);
+  }
+}
+
+/* =====================================================================
+ * GRADIENTES DE TEXTO (clip + transparente — não exprimíveis em util)
+ * ===================================================================== */
+.grad-text-blue {
+  background: linear-gradient(120deg, var(--color-c-600) 0%, var(--color-c-500) 55%, var(--color-c-300) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grad-text-light {
+  background: linear-gradient(120deg, var(--color-c-300), var(--color-c-100));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.grad-text-animated {
+  background: linear-gradient(
+    90deg,
+    var(--color-c-500),
+    var(--color-c-200),
+    var(--color-c-100),
+    var(--color-c-200),
+    var(--color-c-100),
+    var(--color-c-200),
+    var(--color-c-500)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-hero-text-slide);
+}
+
+/* =====================================================================
+ * BACKGROUNDS COMPOSTOS (gradientes radiais sobrepostos)
+ * ===================================================================== */
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 700px 400px at 50% 0%,
+      color-mix(in oklab, var(--color-c-500) 40%, transparent) 0%,
+      transparent 60%
+    ),
+    linear-gradient(180deg, #131c3d 0%, #0a1330 100%);
+  pointer-events: none;
+}
+
+.cta-final-bg {
+  background:
+    radial-gradient(
+      ellipse 700px 400px at 50% 0%,
+      color-mix(in oklab, var(--color-c-500) 40%, transparent) 0%,
+      transparent 60%
+    ),
+    linear-gradient(180deg, #131c3d 0%, #0a1330 100%);
+}
+
+.ai-card-bg {
+  background:
+    radial-gradient(ellipse at top left, color-mix(in oklab, var(--color-c-500) 22%, transparent), transparent 60%),
+    linear-gradient(180deg, #131c3d, #0a1330);
+}
+
+/* Botão primário com gradiente animado */
+.btn-primary-grad {
+  background-color: var(--color-c-600);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-c-600),
+    var(--color-c-500),
+    var(--color-c-800),
+    var(--color-c-600)
+  );
+  background-size: 300% 100%;
+  background-position: 0% 50%;
+  border: 1px solid color-mix(in oklab, var(--color-c-800) 60%, transparent);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+.btn-primary-grad:hover {
+  animation: var(--animate-btn-gradient);
+  border-color: color-mix(in oklab, var(--color-c-500) 70%, transparent);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.18) inset,
+    0 0 0 3px color-mix(in oklab, var(--color-c-500) 18%, transparent);
+}
+
+/* Logo mark com pseudo-elemento de brilho */
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-c-300), var(--color-c-600) 60%, var(--color-c-800));
+  position: relative;
+  box-shadow: 0 6px 16px -4px color-mix(in oklab, var(--color-c-500) 50%, transparent);
+}
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 4px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), transparent 60%);
+}
+
+/* Feature icon gradient */
+.feature-icon-bg {
+  background: linear-gradient(135deg, var(--color-c-500), var(--color-c-800));
+  box-shadow: 0 6px 16px -4px color-mix(in oklab, var(--color-c-500) 50%, transparent);
+}
+
+/* color-mix() não é exprimível em util de Tailwind; estes são re-uso */
+.db-chip-active-bg {
+  background: color-mix(in oklab, var(--color-c-100) 30%, white);
+}
+
+.db-nav-active-bg {
+  background: color-mix(in oklab, var(--color-c-500) 12%, transparent);
+}
+
+.shield-glow {
+  background: radial-gradient(
+    circle at center,
+    color-mix(in oklab, var(--color-c-200) 35%, transparent),
+    transparent 70%
+  );
+}
+
+.check-bg {
+  background: color-mix(in oklab, var(--color-c-100) 60%, white);
+}
+
+/* =====================================================================
+ * EYEBROW — texto label com bullet
+ * ===================================================================== */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* =====================================================================
+ * CARROSSEL (esconder scrollbar)
+ * ===================================================================== */
+.cases-track {
+  scrollbar-width: none;
+}
+.cases-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* =====================================================================
+ * FAQ (animação max-height + plus icon)
+ * ===================================================================== */
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s;
+}
+.faq-item.open .faq-a {
+  max-height: 360px;
+  padding-bottom: 28px;
+}
+
+.faq-plus::before,
+.faq-plus::after {
+  content: "";
+  position: absolute;
+  background: var(--color-ink);
+  width: 10px;
+  height: 1.5px;
+  transition: transform 0.3s;
+}
+.faq-plus::after {
+  transform: rotate(90deg);
+}
+.faq-item.open .faq-plus {
+  background: var(--color-c-800);
+  border-color: var(--color-c-800);
+}
+.faq-item.open .faq-plus::before,
+.faq-item.open .faq-plus::after {
+  background: white;
+}
+.faq-item.open .faq-plus::after {
+  transform: rotate(0);
+}
+
+/* =====================================================================
+ * TERMINAL — cursor a piscar
+ * ===================================================================== */
+.term-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--color-c-300);
+  vertical-align: middle;
+  animation: var(--animate-blink);
+  margin-left: 2px;
+}
+
+/* Hero orbits — círculos tracejados */
+.hero-orbits circle {
+  fill: none;
+  stroke: color-mix(in oklab, var(--color-c-800) 55%, transparent);
+  stroke-width: 1.1;
+  stroke-dasharray: 2 4;
+}
+
+/* TX status pseudo-elemento bullet */
+.tx-status::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Hero meta bullet */
+.hero-meta-item::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+}
+
+/* Case item bullet */
+.case-item::before {
+  content: "";
+  flex: 0 0 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  margin-top: 7px;
+}
+
+/* =====================================================================
+ * FOOTER MOBILE ACCORDION
+ * ===================================================================== */
+@media (max-width: 768px) {
+  .foot-col-collapsible h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 14px 0;
+    margin: 0;
+    border-top: 1px solid var(--color-line);
+    font-size: 13px;
+  }
+  .foot-col-collapsible h5::after {
+    content: "+";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.2s;
+  }
+  .foot-col-collapsible.open h5::after {
+    transform: rotate(45deg);
+  }
+  .foot-col-collapsible a {
+    display: none;
+    padding: 6px 0;
+  }
+  .foot-col-collapsible.open a {
+    display: block;
+  }
+}
