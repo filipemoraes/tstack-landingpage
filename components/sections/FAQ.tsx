@@ -20,7 +20,7 @@ const items = [
   },
   {
     q: "Que blockchain vocês usam? E se ela mudar?",
-    a: "Usamos Polygon por padrão: baixo custo, alta performance e finalidade em segundos. A arquitetura é multi-chain: podemos usar outras redes públicas sob demanda, sem que seu código precise mudar.",
+    a: "Utilizamos redes Blockchain baseadas em EVM. A arquitetura é multi-chain, podemos usar outras redes públicas sob demanda, sem que seu código precise mudar.",
   },
   {
     q: "A IA tem acesso aos meus dados?",
@@ -68,7 +68,10 @@ export function FAQ() {
                   <span className="faq-plus w-[30px] h-[30px] flex-none rounded-full border border-line-strong bg-white grid place-items-center relative transition-all duration-300" />
                 </button>
                 <div className="faq-a">
-                  <p className="text-[15.5px] leading-[1.65] max-w-[720px] text-muted" dangerouslySetInnerHTML={{ __html: it.a }} />
+                  <p
+                    className="text-[15.5px] leading-[1.65] max-w-[720px] text-muted"
+                    dangerouslySetInnerHTML={{ __html: it.a }}
+                  />
                 </div>
               </div>
             );

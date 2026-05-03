@@ -18,7 +18,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 
 const segurancaItems = [
   "Criptografia EVM",
-  "Blockchain pública (Polygon)",
+  "Blockchain",
   "Dados sensíveis nunca expostos",
   "Apenas a prova é registrada on-chain",
   "Análises sobre dados íntegros",
