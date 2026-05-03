@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "T-STACK — Infraestrutura de confiança para eventos críticos",
+  title: "t.stack — Infraestrutura de confiança para eventos críticos",
   description:
     "Registro de eventos críticos em blockchain com prova imutável. White-label, via API, com inteligência artificial sobre dados auditáveis, para empresas que não podem errar.",
 };
@@ -35,10 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${inter.variable} ${roboto.variable} ${jetbrainsMono.variable}`}
-    >
+    <html lang="pt-BR" className={`${inter.variable} ${roboto.variable} ${jetbrainsMono.variable}`}>
       <body>{children}</body>
     </html>
   );
