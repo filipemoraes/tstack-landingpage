@@ -44,10 +44,7 @@ export function Preco() {
             <br />
             <span className="grad-text-light">Cresça sem surpresas.</span>
           </h2>
-          <p>
-            Sem setup, sem mínimos, sem infraestrutura para manter. A operação registra; a
-            plataforma prova.
-          </p>
+          <p>Sem setup, sem mínimos, sem infraestrutura para manter. A operação registra; a plataforma prova.</p>
         </SectionHead>
 
         <div className="grid grid-cols-2 max-[900px]:grid-cols-1 gap-5">
@@ -60,21 +57,8 @@ export function Preco() {
               escalável por design
             </h3>
             <p className="text-[#A8B2CC] mt-3.5">
-              Cobrança apenas pelo que é registrado. Ideal para operações que crescem no próprio
-              ritmo.
+              Cobrança apenas pelo que é registrado. Ideal para operações que crescem no próprio ritmo.
             </p>
-
-            <div className="mt-8">
-              <div className="mt-2 flex items-baseline gap-2.5">
-                <span
-                  className="text-white font-display font-bold leading-none"
-                  style={{ fontSize: 80, letterSpacing: "-.05em" }}
-                >
-                  R$ 0,02
-                </span>
-                <span className="text-base text-[#A8B2CC] font-normal">/ evento registrado</span>
-              </div>
-            </div>
 
             <ul className="mt-7 flex-1 flex flex-col gap-0.5 list-none p-0">
               {standardItems.map((it, i) => (
@@ -90,7 +74,7 @@ export function Preco() {
               ))}
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-8 max-[768px]:[&>*]:w-full max-[768px]:[&>*]:justify-center">
               <a
                 href="#contato"
                 className="inline-flex items-center gap-2 rounded-full font-sans text-[14.5px] font-medium no-underline cursor-pointer h-11 px-5 bg-white text-ink border border-white/30 shadow-[0_2px_8px_rgba(0,0,0,.15)] hover:bg-white/90 transition-all duration-200"
@@ -109,8 +93,8 @@ export function Preco() {
               grandes operações
             </h3>
             <p className="text-[#A8B2CC] mt-3.5 text-[15px]">
-              Volumes a partir de 5M eventos/mês, rede privada, SLA dedicado e compliance assinado
-              por auditores especializados.
+              Volumes a partir de 5M eventos/mês, rede privada, SLA dedicado e compliance assinado por auditores
+              especializados.
             </p>
 
             <ul className="mt-7 flex-1 flex flex-col gap-0.5 list-none p-0">
@@ -127,7 +111,7 @@ export function Preco() {
               ))}
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-8 max-[768px]:[&>*]:w-full max-[768px]:[&>*]:justify-center">
               <Button href="#contato" variant="primary">
                 Falar com especialista →
               </Button>
