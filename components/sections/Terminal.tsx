@@ -142,7 +142,7 @@ export function Terminal() {
               </div>
               <span>terminal · curl</span>
             </div>
-            <div ref={bodyRef} className="p-5 h-[550px] overflow-hidden leading-[1.8] text-[#E8EEF7]" />
+            <div ref={bodyRef} className="p-5 h-[645px] md:h-[550px] overflow-hidden leading-[1.8] text-[#E8EEF7]" />
           </div>
         </div>
       </Container>
