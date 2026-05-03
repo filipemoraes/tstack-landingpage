@@ -10,9 +10,9 @@ const items = [
     q: "Meus dados sensíveis vão parar na blockchain?",
     a: (
       <>
-        Não. Nunca. A T-STACK gera apenas o <em>hash</em> (SHA-256) dos eventos enviados. O dado original permanece 100%
-        no ambiente da operação. O que fica on-chain é uma impressão digital irreversível; suficiente para provar
-        integridade, incapaz de expor conteúdo.
+        Não. Nunca. A <i>t.stack</i> gera apenas o <em>hash</em> (SHA-256) dos eventos enviados. O dado original
+        permanece 100% no ambiente da operação. O que fica on-chain é uma impressão digital irreversível; suficiente
+        para provar integridade, incapaz de expor conteúdo.
       </>
     ),
   },
@@ -34,7 +34,7 @@ const items = [
   },
   {
     q: "Consigo provar um evento para um cliente ou auditor?",
-    a: "Sim. Cada evento registrado gera um link público verificável na blockchain. Qualquer cliente, auditor ou regulador pode confirmar hash, bloco e timestamp de forma independente, sem depender da operação ou da T-STACK.",
+    a: "Sim. Cada evento registrado gera um link público verificável na blockchain. Qualquer cliente, auditor ou regulador pode confirmar hash, bloco e timestamp de forma independente, sem depender da operação ou da <i>t.stack</i>.",
   },
 ];
 

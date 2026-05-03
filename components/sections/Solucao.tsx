@@ -58,9 +58,8 @@ export function Solucao() {
               <span className="grad-text-blue">Prove para sempre.</span>
             </h2>
             <p className="mt-5 text-[17px] max-w-[520px]">
-              A T-STACK registra eventos críticos de qualquer operação em blockchain e garante que
-              não possam ser alterados, com auditoria verificável a qualquer momento, por qualquer
-              parte.
+              A <i>t.stack</i> registra eventos críticos de qualquer operação em blockchain e garante que não possam ser
+              alterados, com auditoria verificável a qualquer momento, por qualquer parte.
             </p>
 
             <div className="flex flex-col mt-9">
@@ -93,9 +92,33 @@ export function Solucao() {
                 </radialGradient>
               </defs>
               <circle cx="200" cy="200" r="190" fill="url(#solGlow)" />
-              <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(0,36,174,.10)" strokeWidth={1} strokeDasharray="3 5" />
-              <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(0,36,174,.13)" strokeWidth={1} strokeDasharray="3 5" />
-              <circle cx="200" cy="200" r="90" fill="none" stroke="rgba(0,36,174,.18)" strokeWidth={1} strokeDasharray="3 5" />
+              <circle
+                cx="200"
+                cy="200"
+                r="170"
+                fill="none"
+                stroke="rgba(0,36,174,.10)"
+                strokeWidth={1}
+                strokeDasharray="3 5"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="130"
+                fill="none"
+                stroke="rgba(0,36,174,.13)"
+                strokeWidth={1}
+                strokeDasharray="3 5"
+              />
+              <circle
+                cx="200"
+                cy="200"
+                r="90"
+                fill="none"
+                stroke="rgba(0,36,174,.18)"
+                strokeWidth={1}
+                strokeDasharray="3 5"
+              />
               <circle cx="200" cy="30" r="3" fill="#AED8FD" opacity=".7" />
               <circle cx="370" cy="200" r="3" fill="#60B4FB" opacity=".7" />
               <circle cx="200" cy="370" r="3" fill="#0095F8" opacity=".7" />
@@ -105,12 +128,34 @@ export function Solucao() {
               <g transform="translate(98.5, 91.5) scale(1.40)">
                 <path d="M5 78V41.5L34.975 60.175L5 78Z" fill="#60B4FB" />
                 <path d="M140 113V78L109.3 97.15L140 113Z" fill="#0063F3" />
-                <path d="M7.5 37.5278L70 1.44338C71.547 0.550212 73.453 0.55021 75 1.44337L137.5 37.5278C140.833 39.4523 140.833 44.2635 137.5 46.188L75 82.2724C73.453 83.1656 71.547 83.1656 70 82.2724L7.5 46.188C4.16667 44.2635 4.16667 39.4523 7.5 37.5278Z" fill="#AED8FD" />
-                <path d="M7.5 73.7778L70 37.6934C71.547 36.8002 73.453 36.8002 75 37.6934L137.5 73.7778C140.833 75.7023 140.833 80.5135 137.5 82.438L75 118.522C73.453 119.416 71.547 119.416 70 118.522L7.5 82.438C4.16667 80.5135 4.16667 75.7023 7.5 73.7778Z" fill="#0095F8" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M70.0005 37.6929C71.5474 36.8 73.4536 36.7999 75.0005 37.6929L113.607 59.982L75.0005 82.272C73.4536 83.1651 71.5474 83.165 70.0005 82.272L31.3931 59.982L70.0005 37.6929Z" fill="#89C3FB" />
-                <path d="M7.5 108.578L70 72.4934C71.547 71.6002 73.453 71.6002 75 72.4934L137.5 108.578C140.833 110.502 140.833 115.314 137.5 117.238L75 153.322C73.453 154.216 71.547 154.216 70 153.322L7.5 117.238C4.16667 115.314 4.16667 110.502 7.5 108.578Z" fill="#0024AE" />
-                <path d="M70.0004 72.4932C71.5473 71.6002 73.4535 71.6001 75.0004 72.4932L114.863 95.5078L75.0004 118.522C73.4534 119.416 71.5473 119.415 70.0004 118.522L30.1371 95.5078L70.0004 72.4932Z" fill="#005DF9" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M69.9999 72.493C71.5468 71.5999 73.4529 71.6 74.9999 72.493L83.4686 77.3826L75.0009 82.2723C73.4541 83.1653 71.5477 83.1651 70.0009 82.2723L61.5311 77.3816L69.9999 72.493Z" fill="#51ABEF" />
+                <path
+                  d="M7.5 37.5278L70 1.44338C71.547 0.550212 73.453 0.55021 75 1.44337L137.5 37.5278C140.833 39.4523 140.833 44.2635 137.5 46.188L75 82.2724C73.453 83.1656 71.547 83.1656 70 82.2724L7.5 46.188C4.16667 44.2635 4.16667 39.4523 7.5 37.5278Z"
+                  fill="#AED8FD"
+                />
+                <path
+                  d="M7.5 73.7778L70 37.6934C71.547 36.8002 73.453 36.8002 75 37.6934L137.5 73.7778C140.833 75.7023 140.833 80.5135 137.5 82.438L75 118.522C73.453 119.416 71.547 119.416 70 118.522L7.5 82.438C4.16667 80.5135 4.16667 75.7023 7.5 73.7778Z"
+                  fill="#0095F8"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M70.0005 37.6929C71.5474 36.8 73.4536 36.7999 75.0005 37.6929L113.607 59.982L75.0005 82.272C73.4536 83.1651 71.5474 83.165 70.0005 82.272L31.3931 59.982L70.0005 37.6929Z"
+                  fill="#89C3FB"
+                />
+                <path
+                  d="M7.5 108.578L70 72.4934C71.547 71.6002 73.453 71.6002 75 72.4934L137.5 108.578C140.833 110.502 140.833 115.314 137.5 117.238L75 153.322C73.453 154.216 71.547 154.216 70 153.322L7.5 117.238C4.16667 115.314 4.16667 110.502 7.5 108.578Z"
+                  fill="#0024AE"
+                />
+                <path
+                  d="M70.0004 72.4932C71.5473 71.6002 73.4535 71.6001 75.0004 72.4932L114.863 95.5078L75.0004 118.522C73.4534 119.416 71.5473 119.415 70.0004 118.522L30.1371 95.5078L70.0004 72.4932Z"
+                  fill="#005DF9"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M69.9999 72.493C71.5468 71.5999 73.4529 71.6 74.9999 72.493L83.4686 77.3826L75.0009 82.2723C73.4541 83.1653 71.5477 83.1651 70.0009 82.2723L61.5311 77.3816L69.9999 72.493Z"
+                  fill="#51ABEF"
+                />
               </g>
             </svg>
           </div>

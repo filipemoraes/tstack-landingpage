@@ -7,8 +7,8 @@ const items = [
     n: "01",
     text: (
       <>
-        <strong>Detecção em tempo real:</strong> fraudes, inconsistências e anomalias identificadas
-        no momento do evento, não no relatório do mês.
+        <strong>Detecção em tempo real:</strong> fraudes, inconsistências e anomalias identificadas no momento do
+        evento, não no relatório do mês.
       </>
     ),
   },
@@ -16,8 +16,8 @@ const items = [
     n: "02",
     text: (
       <>
-        <strong>Análise preditiva de riscos:</strong> modelos treinados sobre dados auditáveis
-        antecipam vulnerabilidades antes que se tornem problemas.
+        <strong>Análise preditiva de riscos:</strong> modelos treinados sobre dados auditáveis antecipam
+        vulnerabilidades antes que se tornem problemas.
       </>
     ),
   },
@@ -25,8 +25,8 @@ const items = [
     n: "03",
     text: (
       <>
-        <strong>Automação de controles:</strong> monitoramento contínuo que age autonomamente,
-        bloqueando, alertando ou escalando conforme as regras do negócio.
+        <strong>Automação de controles:</strong> monitoramento contínuo que age autonomamente, bloqueando, alertando ou
+        escalando conforme as regras do negócio.
       </>
     ),
   },
@@ -34,8 +34,8 @@ const items = [
     n: "04",
     text: (
       <>
-        <strong>Relatórios inteligentes:</strong> geração automática de insights acionáveis,
-        prontos para gestão, auditores e reguladores.
+        <strong>Relatórios inteligentes:</strong> geração automática de insights acionáveis, prontos para gestão,
+        auditores e reguladores.
       </>
     ),
   },
@@ -43,8 +43,8 @@ const items = [
     n: "05",
     text: (
       <>
-        <strong>Projeções operacionais:</strong> previsão de demanda, custo e performance com base
-        em histórico imutável e verificável.
+        <strong>Projeções operacionais:</strong> previsão de demanda, custo e performance com base em histórico imutável
+        e verificável.
       </>
     ),
   },
@@ -62,8 +62,8 @@ export function IA() {
             <span className="grad-text-light">inteligência que protege</span>
           </h2>
           <p>
-            A T-STACK aplica IA diretamente sobre registros com prova de integridade. Cada insight,
-            alerta e relatório gerado parte de dados que ninguém adulterou, sem exceção.
+            A <i>t.stack</i> aplica IA diretamente sobre registros com prova de integridade. Cada insight, alerta e
+            relatório gerado parte de dados que ninguém adulterou, sem exceção.
           </p>
         </SectionHead>
 
@@ -87,10 +87,7 @@ export function IA() {
 
           {/* AI insights card */}
           <div className="ai-card-bg p-8 rounded-2xl border border-white/10 flex flex-col gap-[18px]">
-            <span
-              className="eyebrow"
-              style={{ color: "rgba(255,255,255,.5)" }}
-            >
+            <span className="eyebrow" style={{ color: "rgba(255,255,255,.5)" }}>
               Insights gerados · ao vivo
             </span>
 
@@ -102,8 +99,8 @@ export function IA() {
               </div>
               <p className="text-[14.5px] leading-[1.5] !text-white">
                 Modelo preditivo detectou padrão de inconsistência no ponto{" "}
-                <span className="font-mono text-c-300">#PT-84A21</span> — risco de fraude 87% acima
-                da média; controle automático ativado.
+                <span className="font-mono text-c-300">#PT-84A21</span> — risco de fraude 87% acima da média; controle
+                automático ativado.
               </p>
             </div>
 
@@ -114,8 +111,8 @@ export function IA() {
                 <span>há 14 min</span>
               </div>
               <p className="text-[14.5px] leading-[1.5] !text-white">
-                Regra de monitoramento acionada para transações acima de R$ 50k. 3 eventos
-                bloqueados para revisão manual antes da liquidação.
+                Regra de monitoramento acionada para transações acima de R$ 50k. 3 eventos bloqueados para revisão
+                manual antes da liquidação.
               </p>
             </div>
 
@@ -128,8 +125,7 @@ export function IA() {
                 <span>00:18</span>
               </div>
               <p className="text-[14.5px] leading-[1.5] !text-white">
-                Insight para gestão:{" "}
-                <strong className="text-white">redução de 23% no risco operacional</strong> vs mês
+                Insight para gestão: <strong className="text-white">redução de 23% no risco operacional</strong> vs mês
                 anterior. Relatório pronto para auditoria exportado automaticamente.
               </p>
             </div>

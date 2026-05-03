@@ -6,7 +6,7 @@ const items = [
   {
     n: "01",
     title: "White-label nativo",
-    desc: "Deployment sob marca, domínio e identidade próprios. Os clientes finais interagem com a marca do parceiro, sem nenhuma referência à T-STACK.",
+    desc: "Deployment sob marca, domínio e identidade próprios. Os clientes finais interagem com a marca do parceiro, sem nenhuma referência à <i>t.stack</i>.",
   },
   {
     n: "02",
@@ -62,9 +62,7 @@ export function Diferenciais() {
                 }`}
               >
                 <div className="font-mono text-[11px] tracking-[.15em] text-muted-2">{it.n}</div>
-                <h4 className="text-[19px] font-medium leading-[1.2] -tracking-[.02em]">
-                  {it.title}
-                </h4>
+                <h4 className="text-[19px] font-medium leading-[1.2] -tracking-[.02em]">{it.title}</h4>
                 <p className="text-sm leading-[1.6] max-w-[340px]">{it.desc}</p>
               </div>
             );

@@ -166,8 +166,8 @@ export function CasosUso() {
             Indústrias transformadas.
           </h2>
           <p>
-            Onde há dado crítico, cobrança disputada ou auditoria exigida, a T-STACK entrega prova antes da pergunta ser
-            feita.
+            Onde há dado crítico, cobrança disputada ou auditoria exigida, a <i>t.stack</i> entrega prova antes da
+            pergunta ser feita.
           </p>
         </SectionHead>
 

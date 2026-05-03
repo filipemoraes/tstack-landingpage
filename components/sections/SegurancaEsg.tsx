@@ -17,7 +17,7 @@ function CheckIcon({ className = "" }: { className?: string }) {
 }
 
 const segurancaItems = [
-  "Hash criptográfico SHA-256",
+  "Criptografia EVM",
   "Blockchain pública (Polygon)",
   "Dados sensíveis nunca expostos",
   "Apenas a prova é registrada on-chain",
@@ -59,8 +59,8 @@ export function SegurancaEsg() {
               empresarial, por padrão
             </h3>
             <p className="mt-3.5 text-[15px] max-w-[420px] text-muted">
-              Os dados sensíveis permanecem no ambiente da operação. A T-STACK registra apenas a prova, nunca o conteúdo
-              original.
+              Os dados sensíveis permanecem no ambiente da operação. A <i>t.stack</i> registra apenas a prova, nunca o
+              conteúdo original.
             </p>
             <ul className="mt-7 flex flex-col gap-0.5 list-none p-0">
               {segurancaItems.map((it, i) => (
