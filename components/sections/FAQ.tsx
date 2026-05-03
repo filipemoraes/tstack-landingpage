@@ -54,7 +54,12 @@ export function FAQ() {
           {items.map((it, i) => {
             const open = openIdx === i;
             return (
-              <div key={i} className={`faq-item border-b border-line ${open ? "open" : ""}`}>
+              <div
+                key={i}
+                className={`faq-item border-b border-line ${open ? "open" : ""} ${
+                  i === items.length - 1 ? "max-[768px]:!border-b-0" : ""
+                }`}
+              >
                 <button
                   onClick={() => setOpenIdx(open ? null : i)}
                   className="w-full py-7 bg-transparent border-0 flex justify-between items-center gap-6 font-display text-[19px] font-medium text-ink cursor-pointer text-left -tracking-[.015em]"

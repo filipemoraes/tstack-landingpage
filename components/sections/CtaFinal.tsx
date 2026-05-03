@@ -51,7 +51,7 @@ export function CtaFinal() {
               placeholder="Telefone (opcional)"
             />
             <textarea
-              className="bg-white/[.06] border border-white/[.12] rounded-[10px] text-white px-4 py-3.5 font-sans text-[14.5px] outline-none transition-colors duration-200 focus:border-c-300 focus:bg-white/10 placeholder:text-white/40 w-full resize-y min-h-[100px]"
+              className="bg-white/[.06] border border-white/[.12] rounded-[10px] text-white px-4 py-3.5 font-sans text-[14.5px] outline-none transition-colors duration-200 focus:border-c-300 focus:bg-white/10 placeholder:text-white/40 w-full resize-none min-h-[100px]"
               placeholder="Conte brevemente seu caso de uso"
             />
             <Button type="submit" variant="primary" className="self-stretch !justify-center">

@@ -114,7 +114,7 @@ export function Terminal() {
               Uma única chamada POST. Sem SDKs obrigatórios, sem dependências exóticas, sem necessidade de aprender
               Solidity. A stack existente permanece intacta, agora à prova de adulteração.
             </p>
-            <div className="mt-7 flex gap-3 flex-wrap">
+            <div className="mt-7 flex gap-3 flex-wrap max-[768px]:[&>*]:w-full max-[768px]:[&>*]:justify-center">
               <Button href="#contato" variant="primary">
                 Testar API grátis
               </Button>
