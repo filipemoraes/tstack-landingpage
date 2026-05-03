@@ -8,13 +8,7 @@ import { Eyebrow } from "../ui/Eyebrow";
 const items = [
   {
     q: "Meus dados sensíveis vão parar na blockchain?",
-    a: (
-      <>
-        Não. Nunca. A <i>t.stack</i> gera apenas o <em>hash</em> (SHA-256) dos eventos enviados. O dado original
-        permanece 100% no ambiente da operação. O que fica on-chain é uma impressão digital irreversível; suficiente
-        para provar integridade, incapaz de expor conteúdo.
-      </>
-    ),
+    a: "Não. Nunca. A <i>t.stack</i> gera apenas o <em>hash</em> (SHA-256) dos eventos enviados. O dado original permanece 100% no ambiente da operação. O que fica on-chain é uma impressão digital irreversível; suficiente para provar integridade, incapaz de expor conteúdo.",
   },
   {
     q: "Preciso entender de blockchain para usar?",
@@ -69,7 +63,7 @@ export function FAQ() {
                   <span className="faq-plus w-[30px] h-[30px] flex-none rounded-full border border-line-strong bg-white grid place-items-center relative transition-all duration-300" />
                 </button>
                 <div className="faq-a">
-                  <p className="text-[15.5px] leading-[1.65] max-w-[720px] text-muted">{it.a}</p>
+                  <p className="text-[15.5px] leading-[1.65] max-w-[720px] text-muted" dangerouslySetInnerHTML={{ __html: it.a }} />
                 </div>
               </div>
             );

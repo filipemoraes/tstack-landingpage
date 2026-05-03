@@ -63,7 +63,7 @@ export function Diferenciais() {
               >
                 <div className="font-mono text-[11px] tracking-[.15em] text-muted-2">{it.n}</div>
                 <h4 className="text-[19px] font-medium leading-[1.2] -tracking-[.02em]">{it.title}</h4>
-                <p className="text-sm leading-[1.6] max-w-[340px]">{it.desc}</p>
+                <p className="text-sm leading-[1.6] max-w-[340px]" dangerouslySetInnerHTML={{ __html: it.desc }} />
               </div>
             );
           })}
