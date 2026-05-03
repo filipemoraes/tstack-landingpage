@@ -18,7 +18,9 @@ function NavInner({ variant }: { variant: "transparent" | "fixed" }) {
   const linksColor = isFixed ? "text-muted hover:[&_a:hover]:text-ink" : "text-white/75 hover:[&_a:hover]:text-white";
 
   return (
-    <div className={`flex items-center justify-between ${isFixed ? "h-[60px] pl-5 pr-[11px]" : "h-[54px] px-10"}`}>
+    <div
+      className={`flex items-center justify-between ${isFixed ? "h-[60px] pl-5 pr-[11px]" : "h-[54px] max-[768px]:px-8 px-10"}`}
+    >
       <a href="#" className={`flex items-center gap-2.5 no-underline ${logoColor}`} aria-label="t.stack">
         <TStackLogo className="h-9 w-auto block" />
       </a>
