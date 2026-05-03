@@ -15,7 +15,7 @@ const script: Step[] = [
   { t: "prompt", txt: "$ ", delay: 200 },
   {
     t: "cmd",
-    txt: 'curl -X POST https://api.tstack.io/v1/events \\\n    -H "Authorization: Bearer sk_live_••••" \\\n    -d \'{"event":"credito.emitido","ref":"#48291"}\'\n',
+    txt: 'curl -X POST https://api.t-stack.ai/v1/events \\\n    -H "Authorization: Bearer sk_live_••••" \\\n    -d \'{"event":"credito.emitido","ref":"#48291"}\'\n',
     delay: 1200,
   },
   { t: "out", txt: "\n→ Processando informações off-chain...\n", delay: 600 },
