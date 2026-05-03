@@ -45,7 +45,7 @@ export function Hero() {
         </div>
 
         <div className="mt-14 flex gap-8 justify-center text-[13px] text-muted-2 flex-wrap px-[20px] md:px-0">
-          {["White-label", "API REST · 5 min para integrar", "SHA-256 + Polygon", "IA nativa"].map((item) => (
+          {["White-label", "API REST · 5 min para integrar", "Criptografia EVM", "IA nativa"].map((item) => (
             <span key={item} className="hero-meta-item inline-flex items-center gap-2">
               {item}
             </span>
