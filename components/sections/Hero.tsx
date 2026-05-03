@@ -32,7 +32,7 @@ export function Hero() {
           Registro de eventos críticos em blockchain com prova imutável. White-label, via API, com inteligência
           artificial sobre dados auditáveis, <strong>para empresas que não podem errar.</strong>
         </p>
-        <div className="mt-10 flex gap-3.5 justify-center flex-wrap px-[20px] md:px-0 max-[768px]:px-0 max-[768px]:[&>*]:w-full max-[768px]:[&>*]:justify-center">
+        <div className="mt-10 flex gap-3.5 justify-center flex-wrap px-[20px] md:px-0 max-[768px]:px-[10px] max-[768px]:[&>*]:w-full max-[768px]:[&>*]:justify-center">
           <Button href="#contato" variant="primary">
             Solicitar demo <span>→</span>
           </Button>
